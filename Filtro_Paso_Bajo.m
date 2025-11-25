@@ -2,7 +2,7 @@
 clc; clear; close all;
 
 %% 1. Cargar audio
-[x, Fs] = audioread('audio_30s.wav'); 
+[x, Fs] = audioread('audio_30s.wav');
 
 % Convertir a mono si es estereo
 if size(x,2) > 1
@@ -12,13 +12,13 @@ end
 t = (0:length(x)-1)/Fs;
 
 %% 2. Definir respuesta al impulso h(t)
-a = 5; 
-t_h = 0:1/Fs:1;  
+a = 5;
+t_h = 0:1/Fs:1;
 h = exp(-a*t_h)';
 
 %% 3. Aplicar convolucion
-y_full = conv(x, h);       
-y = y_full(1:length(x));   
+y_full = conv(x, h);
+y = y_full(1:length(x));
 
 %% 4. Graficar resultados
 figure('Name','Filtro Pasa-Bajos','Color',[1 1 1],'Position',[100 100 1200 800]);

@@ -48,7 +48,7 @@ ylabel('Amplitud');
 title('Señal Filtrada y(t) = x(t) * h(t)');
 grid on;
 
-sgtitle('Análisis de Señal de Audio con Filtro Pasa-Altas');
+sgtitle('Analisis de Señal de Audio con Filtro Pasa-Altas');
 
 %% 5. Guardar audio filtrado
 audiowrite('audio_30s_filtrado_pasa_altas.wav', y, Fs);
